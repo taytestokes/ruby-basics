@@ -92,3 +92,43 @@
         # First and last elements can be pulled from the array
         [1,2,3].first # ==> 1
         [1,2,3].last # ==> 3
+
+# Hashes
+    # Hashes are like dictionaries, use them to look a value up
+    # A hash assigna a value to a key and that value can be looked up by its key
+    # Hashes use a key/value pair
+
+    #Creating a Hash
+        # You can assign a key to a value by using the '=>' hash rocket
+        { "one" => "eins", "two" => "zwei", "three" => "drei" }
+
+    #Looking up a value
+        dictionary = { "one" => "eins", "two" => "zwei", "three" => "drei" }
+        puts dictionary["one"]
+    
+    #Setting a key to a value
+        dictionary["zero"] = "null"
+        puts dictionary["zero"]
+
+    #You can use any kind of object as a key and can store any object as the value
+        { 1 => "eins", 2 => "zwei", 3 => "drei" }
+        { :one => "eins", :two => "zwei", :three => "drei" }
+        { "weights" => ["pound", "kilogram"], "lengths" => ["meter", "mile"] }
+        { :de => { :one => "eins", :two => "zwei", :three => "drei" } }
+
+    # Things you can do with hashes
+        # You can merge hashes
+        { "one" => "eins" }.merge({ "two" => "zwei" }) # ==> { "one" => "eins", "two" => "zwei" }
+        
+        # fetch does the same thing as a square bracket look up but it will raise an error if it is not defined
+        dictionary = { "one" => "eins" }
+        dictionary.fetch("one") # ==> "eins"
+
+        # keys returns an Array with all the keys that a hash knows
+        dictionary = { "one" => "eins", "two" => "zwei" }
+        dictionary.keys # ==> ["one", "two"]
+
+        # length and size both tell how many key/value pairs the hash has
+        dictionary = { "one" => "eins", "two" => "zwei" }
+        dictionary.length # ==> 2
+        dictionary.size # ==> 2
