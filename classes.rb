@@ -119,3 +119,33 @@
     # we could also write this like
     person.password = "super secret" 
     # this is because we are using the = operator in  our attribute write like so password=
+
+# State And Behaviour
+    # Data and Methods
+
+    # An object encapsulates state, which is private to the object, and exposes behaviour by publicly exposing methods to handle that data
+
+# Interacting Objects 
+    class Person
+        def initialize(name)
+        @name = name
+        end
+    
+        def name
+        @name
+        end
+
+        def greet(other)
+            puts "Hi " + other.name + "!"
+        end
+    end
+
+
+    person = Person.new("Anja")
+    friend = Person.new("Carla")
+
+    person.greet(friend) # ==> "Hi Carla!"
+
+# Object Scope and Self
+    # Objects remember everything about themself
+    # We can use the keyword self to refer to the object that owns th executing code
