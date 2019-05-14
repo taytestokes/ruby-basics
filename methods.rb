@@ -101,4 +101,41 @@
     # this is because number is local to the scope of the add_number method and not the global scope
 
 # Combining Methods
+    # What if one method is not enough ?
+    # We can call methods from other methods
+    def add_one(number)
+        number + 1
+    end
 
+    def add_two(number)
+        number = add_one(number)
+        add_one(number)
+    end
+
+    puts add_two(3) # ==> this would output 5
+
+    def sum(number, other)
+        number + other
+    end
+
+    puts sum(3,2) # ==> this recreates the + operator funcitonality
+
+    # lets combine these methods together
+    def add_one(number)
+        sum(number, 1)
+    end
+
+    def add_two(number)
+        sum(number, 2)
+    end
+
+# Printing things
+    # We use the method p to get an understaning what is going on in our script
+    # p method was written to shorten how many times you would need to run puts something.inspect
+
+    # the p method looks like this
+        def p(object)
+            puts object.inspect
+        end
+
+        
