@@ -56,3 +56,49 @@
     name.downcase! # ==> modifies the name variable and lowercases the name
 
     # Bang methods should generally be avoided to keep the data immutable
+
+# Writing Methods
+    # A method is a named block of code that takes input and returns output
+    # Methods define behaviour for an object
+    # Methods make our code reusable by encapsulating the code and sticking a name on it
+
+    # What makes a method?
+        # The four main parts that make a method a method
+        # A name
+        # A block of code
+        # Accepting input (optional)
+        # returning output
+
+    # Defining a method
+        # use the def keyword to define a method, this only defines it and does not use it
+        # use the end keyword to kill the execution of the method
+
+        #EX:
+            def add_number(number)
+                number + 2
+            end
+
+    # Calling a method
+        # once a method is defined we then can call that method to use it
+        add_number(10) # this will execute our method and passes 10 in as the argument
+    
+    # Return values
+        # In ruby a method will always return exactly one object
+        # we will not use the return keyword like other languages
+        # the method will return the value of the last evaluated statement
+    
+# Scopes
+    # Scopes are like areas where certain data is visible
+    # In programming, the scope of a name is where that name is valid
+    # name are defined in a certain scope
+
+    def add_number(number)
+        number + 2
+    end
+
+    puts add_number(5)
+    puts number # ==> this will break your code because it is trying to use code that does not exist
+    # this is because number is local to the scope of the add_number method and not the global scope
+
+# Combining Methods
+
